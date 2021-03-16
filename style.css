@@ -1,0 +1,177 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* my edit */
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background: hsl(210, 46%, 95%) ;
+}
+
+img{
+    border-radius: 50px;
+    border: solid rgba(255, 255, 255, 0.5) ;
+    width: 40px;
+    height: 40px;    
+    margin-top: 5px;
+}
+
+p{
+    line-height: 1.4;
+}
+
+div.nameandphoto{
+    display: flex;
+    flex-flow: row;
+}
+
+.nameandphoto p{
+    margin-left: 25px ;
+  
+}
+
+.nameandphoto p:nth-of-type(1){
+    font-weight: 600;   
+    padding-top: 5px;
+}
+
+.nameandphoto p:nth-of-type(2){
+    font-weight: 500;
+    opacity: 50%;
+}
+
+.bottom{
+    margin-top: 15px;
+}
+
+.bottom p:nth-of-type(1){
+    font-weight: 600 ;
+    font-size: 1.4em;
+}
+
+.bottom p:nth-of-type(2){
+    font-size: 0.96em;
+    font-weight: 500 ;
+    opacity: 70%;
+}
+
+/* grid system */
+
+.grid-content{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 301px 295px 280px 275px ;
+    grid-template-rows: auto auto auto;
+    align-self: center;
+    margin-bottom: 30px;
+}
+/* first card */
+div.first{
+background: url('./images/bg-pattern-quotation.svg') 90% 0 no-repeat hsl(263, 55%, 52%) ;
+border-radius: 5px;
+color: white;
+padding: 30px;
+grid-column-start: 1;
+grid-column-end: 3;
+} 
+
+/* secoend card */
+
+.secoend{
+    background-color:hsl(217, 19%, 35%);
+    border-radius: 5px;
+    padding: 30px;
+    grid-column-start: 3;
+    color: white;
+}
+
+/* Third one */
+
+.third{
+    background: white;
+    grid-row-start: 2; 
+    padding: 31px;
+    border-radius: 10px;
+    color:hsl(219, 29%, 14%);
+}
+
+/* Foruth one */
+
+.fourth{
+    grid-row-start: 2; 
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background: hsl(219, 29%, 14%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* FIFTH ONE */
+.fifth{
+   grid-column-start: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   background: white;
+   padding: 30px;
+   border-radius: 10px;
+  
+}
+
+/* mobile desing */
+
+@media(max-width:1015px){
+    body{
+        height: fit-content;
+    }
+    .grid-content{
+        display: flex;
+        flex-flow: column;
+    }
+}
