@@ -173,5 +173,8 @@ grid-column-end: 3;
     .grid-content{
         display: flex;
         flex-flow: column;
+        align-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
